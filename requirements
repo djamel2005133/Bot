@@ -1,1 +1,1 @@
-telebot
+pip freeze > requirements.txt

@@ -1,9 +1,10 @@
 import telebot
 import requests
 import time
+import os
 
 # توكن بوت Telegram
-TELEGRAM_BOT_TOKEN = '7470140807:AAGE2pbYl9E7wz2Was070vtNIt-CD8ntXYI'
+TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
 CHANNEL_USERNAME = '@djimi25'  # اسم القناة الخاصة بك
 bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN)
 
@@ -78,7 +79,7 @@ def get_otp(message, num):
             'flavour-type': 'gms',
             'Content-Type': 'application/json'
         }
-#
+
         payload = {
             "mgmValue": "ABC"
         }
